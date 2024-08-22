@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Match 2 Flags</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script defer src="./js/app.js"></script>
+    <style>
+        .cardDeck{
+            display: grid;
+            grid-template-rows: repeat(4, 1fr);
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+            place-items: center;
+        }
+
+    </style>
+</head>
+<body>
+    <section>
+        <div id="mastHead">
+            <h1>Flag Match</h1>
+        </div>
+        <div id="rules">
+            <h2>How To Play The Game</h2>
+                <p id="ruleTag"> This is a game of concentration, memory and visual acuity using national flags. Players alternate to turn over two cards at a time.  If a match is made with identical flags, then the player scores a point and the matched cards are removed from the board.  If no match is made, then the cards are turned face-down again to resume play by the other player.  The first player to get 5 matched pairs wins the game.</p>
+        </div>
+        <div id="message">Message</div>
+    </section>
+
+    <div id="nav">
+        <button id="resetButton">Reset Button</button>
+        <div id="countdown"></div>
+        <div class="scorecard"></div>
+            <div class ="scorecardNameOne">Player One</div>
+            <div class ="scorecardScoreOne">0</div>
+            <div class ="scorecardNameTwo">Player Two</div>
+            <div class ="scorecardScoreTwo">0</div>
+    </div>
+
+    <main>
+        <div class="cardDeck">
+            <div class="card cardfront-bkcolor" id="one">
+                <div class="card-side">
+                    <div class="cardfront hidden">
+                        <img src="https://flagicons.lipis.dev/flags/4x3/sg.svg">
+                        <div class="top-center">Singapore</div>
+                        <div class="bottom-center">Asia</div>
+                    </div>
+                    <div class="cardback"> 
+                        <img src="https://cdn.pixabay.com/photo/2022/02/23/20/25/card-7031432_1280.png">
+                    </div>
+                </div>   
+            </div> 
+    
+            <div class="card cardfront-bkcolor" id="two">
+                <div class="card-side">
+                    <div class="cardfront hidden">
+                        <img src="https://flagicons.lipis.dev/flags/4x3/jp.svg">
+                        <div class="top-center">Japan</div>
+                        <div class="bottom-center">Asia</div>
+                    </div>
+                    <div class="cardback"> 
+                        <img src="https://cdn.pixabay.com/photo/2022/02/23/20/25/card-7031432_1280.png">
+                    </div>
+                </div>
+            </div>    
+          
+            <div class="card cardfront-bkcolor" id="three">
+                <div class="card-side">
+                    <div class="cardfront hidden">
+                        <img src="https://flagicons.lipis.dev/flags/4x3/ca.svg">
+                        <div class="top-center">Canada</div>
+                        <div class="bottom-center">N. America</div>
+                    </div>
+                    <div class="cardback"> 
+                        <img src="https://cdn.pixabay.com/photo/2022/02/23/20/25/card-7031432_1280.png">
+                    </div>
+                </div>
+            </div>    
+ 
+           <div class="card cardfront-bkcolor" id="four">
+                <div class="card-side">
+                    <div class="cardfront hidden">
+                        <img src="https://flagicons.lipis.dev/flags/4x3/ee.svg">
+                        <div class="top-center">Estonia</div>
+                        <div class="bottom-center">Europe</div>
+                    </div>
+                    <div class="cardback"> 
+                        <img src="https://cdn.pixabay.com/photo/2022/02/23/20/25/card-7031432_1280.png">
+                    </div>
+                </div>
+            </div>
+
+            <div class="card cardfront-bkcolor" id="five">
+                 <div class="card-side">
+                    <div class="cardfront hidden">
+                        <img src="https://flagicons.lipis.dev/flags/4x3/tw.svg">
+                        <div class="top-center">Taiwan</div>
+                        <div class="bottom-center">Asia</div>
+                    </div>
+                    <div class="cardback"> 
+                        <img src="https://cdn.pixabay.com/photo/2022/02/23/20/25/card-7031432_1280.png">
+                    </div>
+                </div>
+            </div>
+
+            <div class="card cardfront-bkcolor" id="six">
+                <div class="card-side">
+                    <div class="cardfront hidden">
+                        <img src="https://flagicons.lipis.dev/flags/4x3/kr.svg">                        
+                        <div class="top-center">South Korea</div>
+                        <div class="bottom-center">Asia</div>
+                    </div>
+                    <div class="cardback"> 
+                        <img src="https://cdn.pixabay.com/photo/2022/02/23/20/25/card-7031432_1280.png">
+                    </div>
+                </div>
+            </div>
+
+            <div class="card cardfront-bkcolor" id="seven">
+                <div class="card-side">
+                    <div class="cardfront hidden">
+                        <img src="https://flagicons.lipis.dev/flags/4x3/hk.svg">
+                        <div class="top-center">Hong Kong</div>
+                        <div class="bottom-center">Asia</div>
+                    </div>
+                    <div class="cardback"> 
+                        <img src="https://cdn.pixabay.com/photo/2022/02/23/20/25/card-7031432_1280.png">
+                    </div>
+                </div>
+            </div>
+
+            <div class="card cardfront-bkcolor" id="eight">
+                <div class="card-side">
+                    <div class="cardfront hidden">
+                        <img src="https://flagicons.lipis.dev/flags/4x3/cn.svg">
+                        <div class="top-center">China</div>
+                        <div class="bottom-center">Asia</div>
+                    </div>
+                    <div class="cardback"> 
+                        <img src="https://cdn.pixabay.com/photo/2022/02/23/20/25/card-7031432_1280.png">
+                    </div>
+                </div>
+            </div>
+
+            <div class="card cardfront-bkcolor" id="nine">
+                <div class="card-side">
+                    <div class="cardfront hidden">
+                        <img src="https://flagicons.lipis.dev/flags/4x3/sg.svg">
+                        <div class="top-center">Singapore</div>
+                        <div class="bottom-center">Asia</div>
+                    </div>
+                    <div class="cardback"> 
+                        <img src="https://cdn.pixabay.com/photo/2022/02/23/20/25/card-7031432_1280.png">
+                    </div>
+                </div>
+            </div>
+
+            <div class="card cardfront-bkcolor" id="ten">
+                <div class="card-side">
+                    <div class="cardfront hidden">
+                        <img src="https://flagicons.lipis.dev/flags/4x3/jp.svg">
+                        <div class="top-center">Japan</div>
+                        <div class="bottom-center">Asia</div>
+                    </div>
+                    <div class="cardback"> 
+                        <img src="https://cdn.pixabay.com/photo/2022/02/23/20/25/card-7031432_1280.png">
+                    </div>
+                </div>
+            </div>
+
+            <div class="card cardfront-bkcolor" id="eleven">
+                <div class="card-side">
+                    <div class="cardfront hidden">
+                        <img src="https://flagicons.lipis.dev/flags/4x3/ca.svg">
+                        <div class="top-center">Canada</div>
+                        <div class="bottom-center">N. America</div>
+                    </div>
+                    <div class="cardback"> 
+                        <img src="https://cdn.pixabay.com/photo/2022/02/23/20/25/card-7031432_1280.png">
+                    </div>
+                </div>
+            </div>  
+
+             <div class="card cardfront-bkcolor" id="twelve">
+                <div class="card-side">
+                    <div class="cardfront hidden">
+                        <img src="https://flagicons.lipis.dev/flags/4x3/ee.svg">
+                        <div class="top-center">Estonia</div>
+                        <div class="bottom-center">Europe</div>
+                    </div>
+                    <div class="cardback"> 
+                        <img src="https://cdn.pixabay.com/photo/2022/02/23/20/25/card-7031432_1280.png">
+                    </div>
+                </div>
+            </div>
+
+            <div class="card cardfront-bkcolor" id="thirteen">
+                <div class="card-side">
+                    <div class="cardfront hidden">
+                        <img src="https://flagicons.lipis.dev/flags/4x3/tw.svg">
+                        <div class="top-center">Taiwan</div>
+                        <div class="bottom-center">Asia</div>
+                    </div>
+                    <div class="cardback"> 
+                        <img src="https://cdn.pixabay.com/photo/2022/02/23/20/25/card-7031432_1280.png">
+                    </div>
+                </div>
+            </div>
+
+            <div class="card cardfront-bkcolor" id="fourteen">
+                <div class="card-side">
+                    <div class="cardfront hidden">
+                        <img src="https://flagicons.lipis.dev/flags/4x3/kr.svg">
+                        <div class="top-center">South Korea</div>
+                        <div class="bottom-center">Asia</div>
+                    </div>
+                    <div class="cardback"> 
+                         <img src="https://cdn.pixabay.com/photo/2022/02/23/20/25/card-7031432_1280.png">
+                    </div>
+                </div>
+            </div>
+
+            <div class="card cardfront-bkcolor" id="fifteen">
+                <div class="card-side">
+                    <div class="cardfront hidden">
+                        <img src="https://flagicons.lipis.dev/flags/4x3/hk.svg">
+                        <div class="top-center">Hong Kong</div>
+                        <div class="bottom-center">Asia</div>
+                    </div>
+                    <div class="cardback"> 
+                        <img src="https://cdn.pixabay.com/photo/2022/02/23/20/25/card-7031432_1280.png">
+                    </div>
+                </div>
+            </div>
+
+            <div class="card cardfront-bkcolor" id="sixteen">
+                <div class="card-side">
+                    <div class="cardfront hidden">
+                         <img src="https://flagicons.lipis.dev/flags/4x3/cn.svg">
+                         <div class="top-center">China</div>
+                         <div class="bottom-center">Asia</div>
+                    </div>
+                    <div class="cardback"> 
+                        <img src="https://cdn.pixabay.com/photo/2022/02/23/20/25/card-7031432_1280.png">
+                    </div>
+                </div>
+            </div>  
+        </div>
+    </main>
+</body>
+</html>

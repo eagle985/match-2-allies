@@ -1,0 +1,113 @@
+* {
+    box-sizing: border-box;
+  }
+
+body {
+    background-color: #133DB9;
+    font-family: system-ui, sans-serif;
+    font-size: 16px;
+    color: #EFFF2E;
+    min-height: 100vh;
+    min-width: 100vw;
+    margin: 0;
+}
+
+section {
+    height: 250px;
+    background-color: #133DB9;
+    color: #EFFF2E;
+    padding: 24px 72px;
+  }
+
+main {
+    background-color: #EFFF2E;
+    padding: 40px 40px 0px;
+    min-width: 100%;
+}
+
+h1, h2 {
+    text-align: center;
+}
+
+#nav {
+    padding: 32px 72px 30px;
+    background-color:  #133DB9;
+    display: flex;
+    justify-content:space-between;
+}
+
+.scorecard{
+    font-size: 8px;
+
+}
+
+.card {
+    width: 100px;
+    height: 150px;
+    perspective: 1000px;
+    border: 0.5px solid black;
+    border-radius: 10px;
+
+}
+
+.card-side{
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+}
+
+.cardfront img, .cardback img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.cardfront-bkcolor{
+    background-color: lightsteelblue;
+}
+
+.cardback img{
+    vertical-align: middle;
+}
+
+.cardfront{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.hidden{
+    display: none;
+}
+
+.cardback{
+    width: 100%;
+    height: 100%;
+}
+
+#message {
+    display: flex;
+    justify-content: center;
+}
+
+.top-center{
+   
+    position: absolute;
+    top: 10px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    color: black;
+}
+
+.bottom-center{
+    position: absolute;
+    font-size: 10px;
+    bottom: 12px;
+    font-weight: 600;
+    left: 0;
+    right: 0;
+    text-align: center;
+    color: black;
+}
