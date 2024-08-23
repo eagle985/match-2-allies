@@ -18,11 +18,9 @@ let timeClock;
 
 const cardHandEl = document.querySelectorAll('.card')
 
-
 const scoreCardEL = document.querySelector('#scoreCard');
 
 const messageEl = document.querySelector('#message');
-console.log(messageEl);
 
 const funFactEl = document.querySelector('#ruleTag');
 
@@ -37,7 +35,6 @@ const countDownEl = document.querySelector("#countdown")
 
 
 const init = () => {
-    console.log('Game Started!');
 
     turn = 'Player One';
 
@@ -72,7 +69,7 @@ const flipcard = (e) => {
         if (containsCardBack) {
             cardFace.classList.add("hidden")
             cardFaceParent.querySelector(".cardfront").classList.remove("hidden")
-        } 
+        }
         else {
             return
         }
@@ -189,19 +186,12 @@ const matchPoint = () => {
         messageEl.textContent = `${turn} wins.`
         funFactEl.textContent = "Congratulations on the win! The flags of the countries used in this game represent the top eight countries in the world in 2024 for PISA overall student test scores in math, reading and science."
         flipDisable = true
+    } else if (playerOne === 4 && playerTwo === 4) {
+        messageEl.textContent = "It is a tie!"
+        flipDisable = true;
     }
 }
 
-
-
-//generate a point to the player
-//clear the both cards from the board
-// render()
-
-
-
-
-//create a function to switch turns
 const switchTurn = () => {
     if (turn === "Player One") {
         turn = "Player Two"
@@ -212,31 +202,11 @@ const switchTurn = () => {
 }
 
 
-//create a function to reset the cards
-
-
-//Final Winner's message
-// const render = (messageToDisplay) =>{
-// messageEl.textContent = messageToDisplay
-//   }
-
-
-
-//create a function to restart the game
 const restartGame = () => {
-    // turn = null;
-    // winner = null;
-    // firstCard = null;
-    // secondCard = null;
-    // firstCardImage = null;
-    // secondCardImage = null;
-    // init();
     location.reload();
 }
 
 /*----------------------------- Event Listeners -----------------------------*/
-
-//create eventListener to flipcards
 cardHandEl.forEach(suite => {
     suite.addEventListener("click", flipcard)
 }
@@ -244,5 +214,4 @@ cardHandEl.forEach(suite => {
 
 init()
 
-//create eventListener to reset the game upon a winner called
 resetBtnEl.addEventListener("click", restartGame)

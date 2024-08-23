@@ -1,0 +1,71 @@
+//set card variables
+
+//list of cards
+
+
+//create scoreCard 
+
+//creat a message element
+
+//messageEl.textContent = "Congratulations on the win! The flags of the countries used in this game represent the top eight countries in the world in 2024 for PISA overall student test scores in math, reading and science."
+console.log(messageEl);
+
+//create resetButton element
+
+//create a function to shuffle the cards
+
+//create a function to initialize the game
+console.log('Game Started!');
+
+// create a function to flip the cards
+
+ //identify which side of card is showing
+    //target card showing, use conditional to "flip" card to other side
+    //if cardback is showing
+    //hide cardback
+    //make cardfront appear
+    //make background-color appear around flag
+    //else 
+    //hide cardfront
+    //clear background-color
+    //make cardback appear
+    //if no 2nd card then no card click, if 2nd card turn ends
+
+    console.log(firstCard)
+    console.log(secondCard)
+
+
+
+//generate a point to the player
+//clear the both cards from the board
+// render()
+
+
+//create a function to switch turns
+
+
+//create a function to reset the cards
+
+
+//Final Winner's message
+// const render = (messageToDisplay) =>{
+// messageEl.textContent = messageToDisplay
+//   }
+
+
+//create a function to restart the game
+
+    // turn = null;
+    // winner = null;
+    // firstCard = null;
+    // secondCard = null;
+    // firstCardImage = null;
+    // secondCardImage = null;
+    // init();
+
+
+//create eventListener to flipcards
+
+
+//create eventListener to reset the game upon a winner called
+

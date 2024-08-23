@@ -22,7 +22,7 @@ section {
 main {
     background-color: #EFFF2E;
     padding: 40px 40px 0px;
-    min-width: 100%;
+    min-width: 100vw;
 }
 
 h1, h2 {
@@ -30,7 +30,7 @@ h1, h2 {
 }
 
 #nav {
-    padding: 32px 72px 30px;
+    padding: 20px 42px 20px;
     background-color:  #133DB9;
     display: flex;
     justify-content:space-between;
@@ -69,6 +69,8 @@ h1, h2 {
 
 .cardback img{
     vertical-align: middle;
+    width: 100%;
+    height: 100%;
 }
 
 .cardfront{
@@ -83,7 +85,7 @@ h1, h2 {
 
 .cardback{
     width: 100%;
-    height: 100%;
+    height: auto;
 }
 
 #message {
